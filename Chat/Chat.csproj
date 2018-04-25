@@ -1,0 +1,468 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{75CACF07-C577-4072-AF21-8534FA049E41}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Chat</RootNamespace>
+    <AssemblyName>Chat</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>F:\Chat\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>107</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>6B77AF3F0454507CA4122EF0ACC3896F48077C60</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Chat_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="_CUSTOM_CONTROLS, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\_CUSTOM_CONTROLS.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddChatRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddChatRoom.Designer.cs">
+      <DependentUpon>AddChatRoom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Chat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Chat.Designer.cs">
+      <DependentUpon>Chat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChatRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChatRoom.Designer.cs">
+      <DependentUpon>ChatRoom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ComboxItem.cs" />
+    <Compile Include="CustomControl\ChatItemRight.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomControl\ChatItemRight.Designer.cs">
+      <DependentUpon>ChatItemRight.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControl\ChatItemLeft.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomControl\ChatItemLeft.Designer.cs">
+      <DependentUpon>ChatItemLeft.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControl\Face.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomControl\Face.Designer.cs">
+      <DependentUpon>Face.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControl\FileDownload.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomControl\FileDownload.Designer.cs">
+      <DependentUpon>FileDownload.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControl\FileUpLoad.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomControl\FileUpLoad.Designer.cs">
+      <DependentUpon>FileUpLoad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControl\SearchFriendListItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomControl\SearchFriendListItem.Designer.cs">
+      <DependentUpon>SearchFriendListItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\Chatroom.cs" />
+    <Compile Include="Entity\ChatRoomMember.cs" />
+    <Compile Include="Entity\Friend.cs" />
+    <Compile Include="Entity\Group.cs" />
+    <Compile Include="Entity\Notification.cs" />
+    <Compile Include="Entity\ResentChatFile.cs" />
+    <Compile Include="Entity\ServerIP.cs" />
+    <Compile Include="Entity\SessionList.cs" />
+    <Compile Include="Entity\UserInfo.cs" />
+    <Compile Include="FileManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FileManage.Designer.cs">
+      <DependentUpon>FileManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FriendsList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FriendsList.Designer.cs">
+      <DependentUpon>FriendsList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NotificationShow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NotificationShow.Designer.cs">
+      <DependentUpon>NotificationShow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Public\PublicTool.cs" />
+    <Compile Include="Register.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Register.Designer.cs">
+      <DependentUpon>Register.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SearchFriends.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchFriends.Designer.cs">
+      <DependentUpon>SearchFriends.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setting.Designer.cs">
+      <DependentUpon>Setting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DisplayUserInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DisplayUserInfo.Designer.cs">
+      <DependentUpon>DisplayUserInfo.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddChatRoom.resx">
+      <DependentUpon>AddChatRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Chat.resx">
+      <DependentUpon>Chat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChatRoom.resx">
+      <DependentUpon>ChatRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomControl\ChatItemRight.resx">
+      <DependentUpon>ChatItemRight.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomControl\ChatItemLeft.resx">
+      <DependentUpon>ChatItemLeft.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomControl\Face.resx">
+      <DependentUpon>Face.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomControl\FileDownload.resx">
+      <DependentUpon>FileDownload.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomControl\FileUpLoad.resx">
+      <DependentUpon>FileUpLoad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomControl\SearchFriendListItem.resx">
+      <DependentUpon>SearchFriendListItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FileManage.resx">
+      <DependentUpon>FileManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FriendsList.resx">
+      <DependentUpon>FriendsList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NotificationShow.resx">
+      <DependentUpon>NotificationShow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Register.resx">
+      <DependentUpon>Register.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SearchFriends.resx">
+      <DependentUpon>SearchFriends.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setting.resx">
+      <DependentUpon>Setting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DisplayUserInfo.resx">
+      <DependentUpon>DisplayUserInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\img\询问.png" />
+    <Content Include="Resources\img\验证成功.png" />
+    <None Include="Resources\login_icon.bmp" />
+    <None Include="Resources\State\QMe.png" />
+    <None Include="Resources\State\OnLine.png" />
+    <None Include="Resources\State\OffLine.png" />
+    <None Include="Resources\State\null.png" />
+    <None Include="Resources\State\Invisible.png" />
+    <None Include="Resources\State\Dont Disturb.png" />
+    <None Include="Resources\State\Busy.png" />
+    <None Include="Resources\State\Away.png" />
+    <None Include="Resources\img\通知.png" />
+    <None Include="Resources\img\分享.png" />
+    <None Include="Resources\img\menu.png" />
+    <None Include="Resources\img\ap-search.png" />
+    <Content Include="Resources\Audio\ding.wav" />
+    <Content Include="Resources\Audio\online.wav" />
+    <Content Include="Resources\chat.txt" />
+    <Content Include="Resources\Face\Face_0.gif" />
+    <Content Include="Resources\Face\Face_1.gif" />
+    <Content Include="Resources\Face\Face_10.gif" />
+    <Content Include="Resources\Face\Face_100.gif" />
+    <Content Include="Resources\Face\Face_11.gif" />
+    <Content Include="Resources\Face\Face_12.gif" />
+    <Content Include="Resources\Face\Face_13.gif" />
+    <Content Include="Resources\Face\Face_14.gif" />
+    <Content Include="Resources\Face\Face_15.gif" />
+    <Content Include="Resources\Face\Face_16.gif" />
+    <Content Include="Resources\Face\Face_17.gif" />
+    <Content Include="Resources\Face\Face_18.gif" />
+    <Content Include="Resources\Face\Face_19.gif" />
+    <Content Include="Resources\Face\Face_2.gif" />
+    <Content Include="Resources\Face\Face_20.gif" />
+    <Content Include="Resources\Face\Face_21.gif" />
+    <Content Include="Resources\Face\Face_22.gif" />
+    <Content Include="Resources\Face\Face_23.gif" />
+    <Content Include="Resources\Face\Face_24.gif" />
+    <Content Include="Resources\Face\Face_25.gif" />
+    <Content Include="Resources\Face\Face_26.gif" />
+    <Content Include="Resources\Face\Face_27.gif" />
+    <Content Include="Resources\Face\Face_28.gif" />
+    <Content Include="Resources\Face\Face_29.gif" />
+    <Content Include="Resources\Face\Face_3.gif" />
+    <Content Include="Resources\Face\Face_30.gif" />
+    <Content Include="Resources\Face\Face_31.gif" />
+    <Content Include="Resources\Face\Face_32.gif" />
+    <Content Include="Resources\Face\Face_33.gif" />
+    <Content Include="Resources\Face\Face_34.gif" />
+    <Content Include="Resources\Face\Face_35.gif" />
+    <Content Include="Resources\Face\Face_36.gif" />
+    <Content Include="Resources\Face\Face_37.gif" />
+    <Content Include="Resources\Face\Face_38.gif" />
+    <Content Include="Resources\Face\Face_39.gif" />
+    <Content Include="Resources\Face\Face_4.gif" />
+    <Content Include="Resources\Face\Face_40.gif" />
+    <Content Include="Resources\Face\Face_41.gif" />
+    <Content Include="Resources\Face\Face_42.gif" />
+    <Content Include="Resources\Face\Face_43.gif" />
+    <Content Include="Resources\Face\Face_44.gif" />
+    <Content Include="Resources\Face\Face_45.gif" />
+    <Content Include="Resources\Face\Face_46.gif" />
+    <Content Include="Resources\Face\Face_47.gif" />
+    <Content Include="Resources\Face\Face_48.gif" />
+    <Content Include="Resources\Face\Face_49.gif" />
+    <Content Include="Resources\Face\Face_5.gif" />
+    <Content Include="Resources\Face\Face_50.gif" />
+    <Content Include="Resources\Face\Face_51.gif" />
+    <Content Include="Resources\Face\Face_52.gif" />
+    <Content Include="Resources\Face\Face_53.gif" />
+    <Content Include="Resources\Face\Face_54.gif" />
+    <Content Include="Resources\Face\Face_55.gif" />
+    <Content Include="Resources\Face\Face_56.gif" />
+    <Content Include="Resources\Face\Face_57.gif" />
+    <Content Include="Resources\Face\Face_58.gif" />
+    <Content Include="Resources\Face\Face_59.gif" />
+    <Content Include="Resources\Face\Face_6.gif" />
+    <Content Include="Resources\Face\Face_60.gif" />
+    <Content Include="Resources\Face\Face_61.gif" />
+    <Content Include="Resources\Face\Face_62.gif" />
+    <Content Include="Resources\Face\Face_63.gif" />
+    <Content Include="Resources\Face\Face_64.gif" />
+    <Content Include="Resources\Face\Face_65.gif" />
+    <Content Include="Resources\Face\Face_66.gif" />
+    <Content Include="Resources\Face\Face_67.gif" />
+    <Content Include="Resources\Face\Face_68.gif" />
+    <Content Include="Resources\Face\Face_69.gif" />
+    <Content Include="Resources\Face\Face_7.gif" />
+    <Content Include="Resources\Face\Face_70.gif" />
+    <Content Include="Resources\Face\Face_71.gif" />
+    <Content Include="Resources\Face\Face_72.gif" />
+    <Content Include="Resources\Face\Face_73.gif" />
+    <Content Include="Resources\Face\Face_74.gif" />
+    <Content Include="Resources\Face\Face_75.gif" />
+    <Content Include="Resources\Face\Face_76.gif" />
+    <Content Include="Resources\Face\Face_77.gif" />
+    <Content Include="Resources\Face\Face_78.gif" />
+    <Content Include="Resources\Face\Face_79.gif" />
+    <Content Include="Resources\Face\Face_8.gif" />
+    <Content Include="Resources\Face\Face_80.gif" />
+    <Content Include="Resources\Face\Face_81.gif" />
+    <Content Include="Resources\Face\Face_82.gif" />
+    <Content Include="Resources\Face\Face_83.gif" />
+    <Content Include="Resources\Face\Face_84.gif" />
+    <Content Include="Resources\Face\Face_85.gif" />
+    <Content Include="Resources\Face\Face_86.gif" />
+    <Content Include="Resources\Face\Face_87.gif" />
+    <Content Include="Resources\Face\Face_88.gif" />
+    <Content Include="Resources\Face\Face_89.gif" />
+    <Content Include="Resources\Face\Face_9.gif" />
+    <Content Include="Resources\Face\Face_90.gif" />
+    <Content Include="Resources\Face\Face_91.gif" />
+    <Content Include="Resources\Face\Face_92.gif" />
+    <Content Include="Resources\Face\Face_93.gif" />
+    <Content Include="Resources\Face\Face_94.gif" />
+    <Content Include="Resources\Face\Face_95.gif" />
+    <Content Include="Resources\Face\Face_96.gif" />
+    <Content Include="Resources\Face\Face_97.gif" />
+    <Content Include="Resources\Face\Face_98.gif" />
+    <Content Include="Resources\Face\Face_99.gif" />
+    <Content Include="Resources\img\1.jpg" />
+    <Content Include="Resources\img\2.jpg" />
+    <Content Include="Resources\img\add.png" />
+    <Content Include="Resources\img\chat.png" />
+    <Content Include="Resources\img\emoji.png" />
+    <Content Include="Resources\img\file.png" />
+    <Content Include="Resources\img\filetype\c.png" />
+    <Content Include="Resources\img\filetype\CSS.png" />
+    <Content Include="Resources\img\filetype\doc.png" />
+    <Content Include="Resources\img\filetype\excel.png" />
+    <Content Include="Resources\img\filetype\exe.png" />
+    <Content Include="Resources\img\filetype\file.png" />
+    <Content Include="Resources\img\filetype\html.png" />
+    <Content Include="Resources\img\filetype\MP3.png" />
+    <Content Include="Resources\img\filetype\ppt.png" />
+    <Content Include="Resources\img\filetype\TXT.png" />
+    <Content Include="Resources\img\filetype\zip.png" />
+    <Content Include="Resources\img\login_form.ico" />
+    <Content Include="Resources\img\menu\group.png" />
+    <Content Include="Resources\img\menu\info.png" />
+    <Content Include="Resources\img\menu\Menu %281%29.png" />
+    <Content Include="Resources\img\menu\menu.png" />
+    <Content Include="Resources\img\menu\message.png" />
+    <Content Include="Resources\img\menu\save.png" />
+    <Content Include="Resources\img\menu\删除.png" />
+    <Content Include="Resources\img\menu\刷新.png" />
+    <Content Include="Resources\img\menu\备注.png" />
+    <Content Include="Resources\img\menu\置顶.png" />
+    <Content Include="Resources\img\menu\群聊.png" />
+    <Content Include="Resources\img\menu\记录.png" />
+    <Content Include="Resources\img\menu\转发.png" />
+    <Content Include="Resources\img\menu\退出.png" />
+    <Content Include="Resources\img\menu\隐藏.png" />
+    <Content Include="Resources\img\me_photo.png" />
+    <Content Include="Resources\img\more.png" />
+    <Content Include="Resources\img\notify.ico" />
+    <Content Include="Resources\img\picture.png" />
+    <Content Include="Resources\img\room0.png" />
+    <Content Include="Resources\img\room1.png" />
+    <Content Include="Resources\img\room2.png" />
+    <Content Include="Resources\img\search.png" />
+    <Content Include="Resources\img\set.png" />
+    <Content Include="Resources\img\vib.png" />
+    <Content Include="Resources\img\娱乐.png" />
+    <Content Include="Resources\img\消息.png" />
+    <Content Include="Resources\img\科学.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\ClassLibrary\ClassLibrary\ClassLibrary.csproj">
+      <Project>{8237e8b7-72b6-47aa-8084-6855e5bbb1e7}</Project>
+      <Name>ClassLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

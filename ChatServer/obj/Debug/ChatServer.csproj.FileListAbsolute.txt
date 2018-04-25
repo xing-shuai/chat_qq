@@ -1,0 +1,16 @@
+F:\vspro\Chat\ChatServer\bin\Debug\ChatServer.exe.config
+F:\vspro\Chat\ChatServer\bin\Debug\ChatServer.exe
+F:\vspro\Chat\ChatServer\bin\Debug\ChatServer.pdb
+F:\vspro\Chat\ChatServer\bin\Debug\Chat.exe
+F:\vspro\Chat\ChatServer\bin\Debug\ClassLibrary.dll
+F:\vspro\Chat\ChatServer\bin\Debug\MySql.Data.dll
+F:\vspro\Chat\ChatServer\bin\Debug\_CUSTOM_CONTROLS.dll
+F:\vspro\Chat\ChatServer\bin\Debug\ClassLibrary.pdb
+F:\vspro\Chat\ChatServer\bin\Debug\_CUSTOM_CONTROLS.pdb
+F:\vspro\Chat\ChatServer\obj\Debug\ChatServer.csprojResolveAssemblyReference.cache
+F:\vspro\Chat\ChatServer\obj\Debug\ChatServer.Form1.resources
+F:\vspro\Chat\ChatServer\obj\Debug\ChatServer.Properties.Resources.resources
+F:\vspro\Chat\ChatServer\obj\Debug\ChatServer.csproj.GenerateResource.Cache
+F:\vspro\Chat\ChatServer\obj\Debug\ChatServer.exe
+F:\vspro\Chat\ChatServer\obj\Debug\ChatServer.pdb
+F:\vspro\Chat\ChatServer\bin\Debug\Chat.pdb
